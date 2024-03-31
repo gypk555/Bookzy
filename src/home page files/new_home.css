@@ -1,0 +1,46 @@
+.image > img{
+    width: 200px;
+    height: 300px;
+    object-fit:cover;
+    filter: none;
+}
+.image{
+    width: 200px;
+    height: 300px;
+    background-color: black;
+}
+
+.grid_container{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    background-color: rgb(235, 229, 229);
+    padding: 10px;
+}
+
+.homepage_books button{
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    background-color:green;
+    text-decoration: none; 
+}
+
+
+button{
+    border:none;
+    border-radius: 5px !important;
+    color: white;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.homepage_books {
+    padding-top: 20px;
+}

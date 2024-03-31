@@ -1,0 +1,31 @@
+.form_page{
+    width: 100vw;
+}
+
+form>table>tr>td>input{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.uname{
+    width: 310px;
+}
+.name  {
+    width: 150px;
+}
+form{
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 350px;
+    height:550px;
+    margin-top: 50px;
+    padding-top: 40px;
+    background-color: rgb(143, 148, 143);
+}
+button{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 15%;
+    background-color: rgb(108, 164, 238);
+}

@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    height: 72px;
+    width: 100vw;
+}
+.site-title{
+    font-size: 2rem;
+}
+.nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+}
+.nav a{
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+
+
+}
+
+.nav>ul>li>button{
+    background-color: transparent;
+    border: none;
+    padding-top: 10px;
+    color: white;
+}
+
+.Genres, .Profile{
+    width: 200px;
+    padding-top: 10px;
+    background-color: rgb(189, 188, 188);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:65px;
+    z-index: 3;
+}
+.Genres>div{
+    padding-bottom: 20px;
+}
+
+
+
+.account_settings{
+    margin-left: 110PX;
+    width: max-content;
+    /* padding-left: 100px; */
+    background-color: rgb(189, 188, 188);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:65px;
+    z-index: 3;
+
+}
+
+
+/*.nav li.active{
+    background-color: #555;
+}
+*/
+.nav li:hover{
+    background-color: #777;
+}
+.nav li.searchbar:hover{
+   background-color: black;
+}
+
+
+.searchbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchbar input{
+    border-radius: 0;
+    height: 19px;
+    width: 170px;
+    padding: 1px 2px;
+}
+
+
+
