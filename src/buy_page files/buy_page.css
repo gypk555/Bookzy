@@ -10,8 +10,9 @@ body{
     margin-bottom: 20px;
 }
 .button{
-    width: 70px;
-    height: 30px;
+    /* width: 70px; */
+    padding: 1rem 2rem;
+    /* height: 30px; */
     color: rgb(23, 24, 22);
     background-color: rgb(111, 190, 77);
     font-family: Verdana, Geneva, Tahoma, sans-serif;

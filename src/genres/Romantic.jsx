@@ -74,14 +74,14 @@ export default function Romantic(){
                     setvalue((prev)=>{return(!prev);});
                     cart_inc();
                    }}>
-                    <b>add to cart</b>
+                    <b>Add to Cart</b>
                 </button>
                 :
                 <button onClick={()=>{
                     setvalue((prev)=>{return(!prev);});
                     cart_dec();
                     }}>
-                    <b>remove to cart</b>
+                    <b>remove from cart</b>
                 </button>
                 } 
             

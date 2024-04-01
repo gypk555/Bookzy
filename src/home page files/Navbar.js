@@ -75,19 +75,19 @@ export default function Navbar(props){
                 </svg>
                 </button>
             </li>
-            <li className="active">
+            <li className="active jus-cen">
                 <button onClick={(event)=>{
                     event.preventDefault();
                     navigate("/");
                 }}
                 ><b>Home</b></button>
             </li>
-            <li>
+            <li class="jus-cen">
                 <a href="about.html " > About</a>
             </li>            
-            <li>
+            <li class="jus-cen">
                 <div style={{"position":"relative"}}>
-                    <div><button onClick={handle_genres}  style={{"backgroundColor":"transparent", "paddingTop":"10px"}}><b>Genres</b></button></div>
+                    <div><button onClick={handle_genres}  style={{"backgroundColor":"transparent"}}><b>Genres</b></button></div>
                     {genre?<div className="Genres" >
                         <div onClick={(event)=>{
                             event.preventDefault();
@@ -110,7 +110,7 @@ export default function Navbar(props){
                     null}
                 </div>
             </li>
-            <li>
+            <li class="jus-cen">
                 <button onClick={(event=>{
                     event.preventDefault();
                     navigate("/cart");
@@ -120,10 +120,10 @@ export default function Navbar(props){
                 </svg>
                 <sup style={{"color":"red"}}>{props.cart_count}</sup></b></button>
             </li>
-            <li>
+            <li class="jus-cen">
                 <a href="contactpage.html" >Contact</a>
             </li>
-            <li>{props.uid?
+            <li class="jus-cen">{props.uid?
                     <div>
                       <div>
                     <button onClick={Handle_profile}

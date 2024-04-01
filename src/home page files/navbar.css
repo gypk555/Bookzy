@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
-    ccursor:pointer;
+}
+button{
+    cursor:pointer;
 }
 body{
     margin: 0;
@@ -41,7 +43,7 @@ body{
 .nav>ul>li>button{
     background-color: transparent;
     border: none;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     color: white;
 }
 
@@ -104,4 +106,56 @@ body{
 }
 
 
+/* Existing styles... */
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav a {
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .site-title {
+        margin-bottom: 1rem;
+    }
+
+    .Genres, .Profile, .account_settings {
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        top: 72px; /* Adjusted to the height of the navbar */
+    }
+
+    .searchbar {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .searchbar input {
+        width: calc(100% - 4px); /* Adjusts the width to account for padding */
+    }
+}
+
+/* You might also want to hide certain elements or adjust font sizes for smaller screens */
+@media (max-width: 480px) {
+    .nav {
+        /* Adjust styles for very small screens if necessary */
+    }
+
+    /* Further adjustments for smaller screens */
+}
+.jus-cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

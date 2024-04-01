@@ -27,12 +27,14 @@ function Book_entry(props){
 
 
     return <div >
-        <div className="homepage_books">
-            <div className="image"><img src={props.src} alt="book"></img></div>
+        <div class="homepage_books">
+            <div class="image"><img src={props.src} alt="book"></img></div>
             <div>{props.bookname}</div>
             <div>{props.author}</div>
             <div>{props.type}</div>
             <div>{props.item_price}</div>
+            <div className="buttons">
+
             <button class="button button1" style={{"color":"white"}} onClick={(event)=>{
                 To_buy_page(Buy_page);
                 event.preventDefault();
@@ -43,16 +45,17 @@ function Book_entry(props){
                     setvalue((prev)=>{return(!prev);});
                     props.cart_inc();
                    }}>
-                    <b>add to cart</b>
+                    <b>Add to Cart</b>
                 </button>
                 :
                 <button onClick={()=>{
                     setvalue((prev)=>{return(!prev);});
                     props.cart_dec();
                     }}>
-                    <b>remove to cart</b>
+                    <b>remove from cart</b>
                 </button>
                 } 
+            </div>
             
         </div>
     </div>;

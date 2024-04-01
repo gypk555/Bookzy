@@ -24,8 +24,8 @@ form{
     background-color: rgb(143, 148, 143);
 }
 button{
-    margin-top: 10px;
-    height: 30px;
+    /* margin-top: 10px; */
+    /* height: 30px; */
     border-radius: 15%;
     background-color: rgb(108, 164, 238);
 }
