@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import axios from "axios";
+import img from "./bookshelf.jpg";
 // import Login from "../login";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
+// import "./login.css";
 
 
 
@@ -17,16 +20,24 @@ const Form = () =>{
         c_password:"",
     });
 
-    const [user_data, setdata]=useState([]);
+   
     const [sign_up_confirm,setsignup]=useState(false);
 
-    function handle_submit(){
+     async function handle_submit(event){
+        event.preventDefault();
         console.log("called submit");
-        setsignup(true);
-        setdata((previous)=>{
-            return ([...previous,user_inputs]);
-        });
-        console.log(user_data);
+        if(user_inputs.fname!=="" && user_inputs.lname!=="" && user_inputs.uname!=="" && user_inputs.password!=="" && user_inputs.mail!=="" && user_inputs.number!=="" && user_inputs.c_password!==""){
+            if(user_inputs.c_password===user_inputs.password){
+                try{
+                    const res=await axios.post("http://localhost:5542/signup",user_inputs);
+                    console.log("success");
+                    setsignup(true);
+                }catch(err){
+                    console.log(err);
+                    alert("ERROR");  
+                }
+            }
+        }  
     }
 
     function handlechange(event){
@@ -41,7 +52,9 @@ const Form = () =>{
     }
 
         return (
-                        <center>
+        
+        <div className="reg_page" style={{"backgroundImage":`url(${img})` }} >
+            <div></div>
             <div className="form_page">
                 {!sign_up_confirm?<form>
                     <table>
@@ -68,15 +81,16 @@ const Form = () =>{
                     }}>Already have account? Sign in</button>
                 </form>
                 :
-                <div>
-                <h1>Thanks for signing up</h1>
+                <div className="form_page_log">
+                <h1 style={{"color":"rgb(218, 236, 111)"}}>Thanks for signing up</h1>
                 <button onClick={(event)=>{
                     event.preventDefault();
                     Navigate("/login");
                 }}>back to login</button>
                 </div>}
             </div>
-        </center>
+        </div>
+    
         );
     }
 
