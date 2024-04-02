@@ -64,7 +64,7 @@ export default function Fantasy(){
             <div>{container.author}</div>
             <div>{container.type}</div>
             <div>{container.item_price}</div>
-            <button class="button button1" style={{"color":"white"}} onClick={(event)=>{
+            <button className="button button1" style={{"color":"white"}} onClick={(event)=>{
                 To_buy_page();
                 event.preventDefault();
                 Navigate("/buy_page");

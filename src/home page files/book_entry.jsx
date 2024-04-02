@@ -26,16 +26,16 @@ function Book_entry(props){
 
 
 
-    return <div >
-        <div class="homepage_books">
-            <div class="image"><img src={props.src} alt="book"></img></div>
+    return <div className="main_homepage_books">
+        <div className="homepage_books">
+            <div className  ="image"><img src={props.src} alt="book"></img></div>
             <div>{props.bookname}</div>
             <div>{props.author}</div>
             <div>{props.type}</div>
             <div>{props.item_price}</div>
             <div className="buttons">
 
-            <button class="button button1" style={{"color":"white"}} onClick={(event)=>{
+            <button className="button button1" style={{"color":"white"}} onClick={(event)=>{
                 To_buy_page(Buy_page);
                 event.preventDefault();
                 Navigate("/buy_page");

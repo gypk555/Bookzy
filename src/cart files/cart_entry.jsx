@@ -11,7 +11,7 @@ function cart_entry(props){
             <div>{props.author}</div>
             <div>{props.type}</div>
             <div>{props.grid_item_price}</div>
-            <div><button class="button button1" ><a href={props.grid_item_buy1}><b>Buy!</b></a></button> <button><b>remove from Cart</b></button></div>
+            <div><button className="button button1" ><a href={props.grid_item_buy1}><b>Buy!</b></a></button> <button><b>remove from Cart</b></button></div>
         </div>
     </div>;
 }
