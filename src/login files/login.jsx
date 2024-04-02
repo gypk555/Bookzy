@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import img from "./bookshelf.jpg";
 import "./login.css";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
@@ -24,10 +25,22 @@ function Login(){
 
     }
 
-    function check_logdetails(event){
-        if(credentials.username==="pavan"&&credentials.password==="pavan"){
-            event.preventDefault();
-            Navigate("/",{state:{uid:"pavan"}});
+    async function check_logdetails(event){
+        event.preventDefault();
+        if(credentials.username!==""&&credentials.password!==""){
+            try{
+                const res=await axios.post("http://localhost:5542/login",credentials);
+                console.log("successfully login");
+                var y=res.data;
+                console.log(y);
+                if(y!=="Invalid Username"&&y!=="Invalid Password"){
+                    Navigate("/",{state:{uid:y}});
+                }
+            }catch(err){
+                console.log(err);
+                alert("ERROR");  
+            }
+            
         }
     }
 
@@ -52,11 +65,7 @@ function Login(){
                     Navigate("/register");
                 }}>
                 Not registered? create an account</button>
-            </div>
-            
-            
-          
-            
+            </div>   
         </div>
     );
 }
