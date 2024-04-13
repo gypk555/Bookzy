@@ -25,18 +25,23 @@
 }
 
 form>table>tr>td>input{
-    border: 1px solid black;
-    border-radius: 5px;
+    /* border-radius: 5px;
     width: 50%;
     height: 7%;
     margin-top: 10px;
     margin-bottom: 10px;
     /* border-radius: 8px; */
-    border: none;
+    /* border: none; */
     /* opacity: 0.9; */
-    background-color: rgb(241, 237, 228);
+    /* background-color: rgb(241, 237, 228); */ 
 }
-
+form>table>tbody>tr>td>input{
+    /* border: 2px solid black; */
+    border: none;
+    outline: 2px solid black;
+    outline: none;
+    padding: 0.5rem;
+}
 
 .uname{
     width: 310px;
@@ -46,17 +51,21 @@ form>table>tr>td>input{
 }
 form{
     border: 1px solid black;
-    border-radius: 5%;
-    width: 350px;
-    height:550px;
+    border-radius: 15px;
+    /* width: 350px; */
+    /* height:550px; */
     margin-top: 10px;
     margin-right: 150px;
-    padding-top: 10px;
+    padding: 10px ;
     background-color: rgb(143, 148, 143);
 }
 button{
     margin-top: 10px;
-    height: 30px;
-    border-radius: 15%;
+    /* height: 30px; */
+    padding: .5rem 1rem;
+    border-radius: 15px;
     background-color: rgb(108, 164, 238);
+}
+button:hover{
+    background-color: rgb(154, 186, 227);
 }

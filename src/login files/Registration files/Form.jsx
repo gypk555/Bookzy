@@ -58,12 +58,17 @@ const Form = () =>{
             <div className="form_page">
                 {!sign_up_confirm?<form>
                     <table>
-                        <tr><td>NAME</td><td>Last Name </td></tr>
-                        <tr><td><input type="text" placeholder="surname" className="name" name="fname" onChange={handlechange} required></input></td><td><input type="text" placeholder="Ram" className="name" name="lname" onChange={handlechange}></input></td></tr>
+                        <tbody>
+
+                        <tr><td>First Name</td><td>Last Name </td></tr>
+                        <tr><td><input type="text" placeholder="First Name" className="name" name="fname" onChange={handlechange} required></input></td><td><input type="text" placeholder="Last Name" className="name" name="lname" onChange={handlechange}></input></td></tr>
+                        </tbody>
                     </table>
                     <table>
-                        <tr><td>username            </td></tr>
-                        <tr><td><input type="text" placeholder="username" className="uname" name="uname" onChange={handlechange} required></input></td></tr>
+                        <tbody>
+
+                        <tr><td>Username            </td></tr>
+                        <tr><td><input type="text" placeholder="Username" className="uname" name="uname" onChange={handlechange} required></input></td></tr>
                         <tr><td>Email</td></tr>
                         <tr><td><input type="mail" placeholder="user@Email.com" className="uname" name="mail" onChange={handlechange} required></input></td></tr>
                         <tr><td>Mobile No</td></tr>
@@ -72,10 +77,13 @@ const Form = () =>{
                         <tr><td><input type="password" className="uname" name="password" onChange={handlechange} required ></input></td></tr>
                         <tr><td>Confirm Password</td></tr>
                         <tr><td><input type="password" className="uname" name="c_password" onChange={handlechange} required></input></td></tr>
+                    </tbody>
                     </table>
-                    <button  onClick={handle_submit}>sign up</button>
+                    <button 
+                style={{"height":"30px"}}
+                onClick={handle_submit}>sign up</button>
                     <br></br>
-                    <button style={{"backgroundColor":"transparent","color":"black","border":"none"}} onClick={(Event)=>{
+                    <button style={{"backgroundColor":"transparent","color":"black","border":"none","height":"30px"}} onClick={(Event)=>{
                         Event.preventDefault();
                         Navigate("/login");
                     }}>Already have account? Sign in</button>
@@ -83,7 +91,9 @@ const Form = () =>{
                 :
                 <div className="form_page_log">
                 <h1 style={{"color":"rgb(218, 236, 111)"}}>Thanks for signing up</h1>
-                <button onClick={(event)=>{
+                <button 
+                style={{"height":"30px"}}
+                onClick={(event)=>{
                     event.preventDefault();
                     Navigate("/login");
                 }}>back to login</button>

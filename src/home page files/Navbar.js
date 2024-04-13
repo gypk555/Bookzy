@@ -65,10 +65,10 @@ export default function Navbar(props){
 
     return(
     <nav className="nav">
-        <a href="/" className="site-title"> Bookzy.com <span></span></a>
         <ul>
+        <a href="/" className="site-title"> Bookzy.com <span></span></a>
             <li className="searchbar" style={{"display":"flex"}}>
-                <p>search a book </p><input style={{"margin":"20px"}} onChange={handle_change} ></input>
+                <input style={{"margin":"20px"}} onChange={handle_change} placeholder="Search for a book" ></input>
                 <button >
                 <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -80,14 +80,14 @@ export default function Navbar(props){
                     event.preventDefault();
                     navigate("/");
                 }}
-                ><b>Home</b></button>
+                ><p>Home</p></button>
             </li>
             <li className="jus-cen">
                 <a href="about.html " > About</a>
             </li>            
             <li className="jus-cen">
                 <div style={{"position":"relative"}}>
-                    <div><button onClick={handle_genres}  style={{"backgroundColor":"transparent"}}><b>Genres</b></button></div>
+                    <div><button onClick={handle_genres}  style={{"backgroundColor":"transparent"}} className="genre_button"><p>Genres</p></button></div>
                     {genre?<div className="Genres" >
                         <div onClick={(event)=>{
                             event.preventDefault();
@@ -163,7 +163,7 @@ export default function Navbar(props){
                     <button onClick={(event)=>{
                         event.preventDefault();
                         navigate("/login");
-                    }}><b>Login/Register</b></button>
+                    }}><p>Login/Register</p></button>
                     }
                 
             </li>

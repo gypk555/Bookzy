@@ -1,5 +1,11 @@
+img{
+    filter:none;
+    opacity: 1;
+    height: 50vh;
+}
 body{
-    display: flex;
+    /* display: flex; */
+    /* padding: 2rem; */
 }
 .p{
   font-size: large;
